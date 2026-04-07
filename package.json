@@ -1,0 +1,11 @@
+{
+  "name": "swe-6-4-join-queries",
+  "version": "1.0.0",
+  "scripts": {
+    "db:start": "node queries.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "pg": "^8.11.0"
+  }
+}
