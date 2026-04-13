@@ -18,7 +18,8 @@ const getBookmarksByUsername = async (username) => {
   const query = `SELECT bookmarks.title, bookmarks.url, users.username
                 FROM users
                 INNER JOIN bookmarks
-                ON bookmarks.user_id = users.user_id WHERE users.username = $1`;
+                ON bookmarks.user_id = users.user_id
+                WHERE users.username = $1`;
   const { rows } = await pool.query(query, [username]);
   return rows;
 };
